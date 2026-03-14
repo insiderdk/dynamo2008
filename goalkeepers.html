@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Команда Ю15 21/22</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+<div class="title">
+<img src="dynamo.png" class="logo">
+<h1>Команда 2008 року народження сезону 21/22/23</h1>
+</div>
+   
+
+   <nav class="menu">
+
+<a onclick="showSection('all', this)" class="active">Всі</a>
+
+<a onclick="showSection('goalkeepers', this)">Воротарі</a>
+
+<a onclick="showSection('defenders', this)">Захисники</a>
+
+<a onclick="showSection('midfielders', this)">Півзахисники</a>
+
+<a onclick="showSection('forwards', this)">Нападники</a>
+
+</nav>
+</header>
+<body>
+
+
+  <div class="container" id="goalkeepers">
+
+<h2 class="section-title">Воротарі</h2>
+<div class="players">
+
+<div class="card">
+
+<div class="number">99</div>
+
+<div class="top-line"></div>
+
+<img src="вртр2.png" class="player">
+
+<div class="info">
+<div class="position">Воротарь</div>
+<div class="name">Єгор<br>Шепелев</div>
+</div>
+
+</div>
+<div class="card">
+
+<div class="number">1</div>
+
+<div class="top-line"></div>
+
+<img src="пост.png" class="player">
+
+<div class="info">
+<div class="position">Воротарь</div>
+<div class="name">Артем<br>Сьомка</div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+function showSection(section, element){
+
+let sections = document.querySelectorAll(".container")
+
+sections.forEach(sec => {
+
+if(section === "all"){
+sec.style.display = "block"
+}
+else{
+sec.style.display = "none"
+}
+
+})
+
+if(section !== "all"){
+document.getElementById(section).style.display = "block"
+}
+
+/* змінюємо активну кнопку */
+
+let links = document.querySelectorAll(".menu a")
+
+links.forEach(link => {
+link.classList.remove("active")
+})
+
+element.classList.add("active")
+
+}
+
+</script></body>
+</html>
