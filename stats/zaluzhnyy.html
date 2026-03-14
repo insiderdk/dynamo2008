@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Микита Залужний — Профіль гравця</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+<div class="top-bar">
+
+    <div class="left-group">
+        <a href="../index.html" class="back-button">← Назад</a>
+        <img src="../dynamo.png" class="club-logo">
+    </div>
+
+   
+
+</div>
+
+
+
+<a href="../index.html" class="back-button">← Головна</a>
+
+<div class="player-wrapper">
+
+    <!-- ЛІВА ЧАСТИНА — ТЕКСТ -->
+    <div class="left-side">
+        <h1 class="player-name">Микита Залужний</h1>
+        <div class="underline"></div>
+
+        <div class="param-row">
+            <div class="param-block">
+                <div class="param-title">Позиція</div>
+                <div class="param-value">Захисник</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Національність</div>
+                <div class="param-value">Україна</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Дата народження</div>
+                <div class="param-value">19.02.2008</div>
+            </div>
+        </div>
+
+        <p class="description">
+           Микита Залужний – надійний центральний захисник, який відзначається хорошим читанням гри та впевненою грою в обороні. Він добре працює в єдиноборствах, грамотно займає позицію та допомагає команді організовувати захист. Микита також корисний під час стандартних положень завдяки своїй грі на другому поверсі.
+        </p>
+    </div>
+
+    <!-- ПРАВА ЧАСТИНА — ФОТО + НОМЕР -->
+    <div class="right-side">
+        <div class="big-number double">13</div>
+
+       <img src="../zaluzhnyy.png" class="player-photo">
+
+    </div>
+
+</div>
+<script>
+let lang = localStorage.getItem("lang") || "ua";
+
+const translations = {
+    ua: {
+        back: "← Назад",
+        home: "← Головна",
+        name: "Микита Залужний",
+
+        position_title: "Позиція",
+        nationality_title: "Національність",
+        birth_title: "Дата народження",
+
+        position: "Захисник",
+        nationality: "Україна",
+        birth: "19.02.2008",
+
+        description: "Микита Залужний – надійний центральний захисник, який відзначається хорошим читанням гри та впевненою грою в обороні. Він добре працює в єдиноборствах, грамотно займає позицію та допомагає команді організовувати захист. Микита також корисний під час стандартних положень завдяки своїй грі на другому поверсі."
+    },
+
+    en: {
+        back: "← Back",
+        home: "← Home",
+        name: "Mykyta Zaluzhnyi",
+
+        position_title: "Position",
+        nationality_title: "Nationality",
+        birth_title: "Date of birth",
+
+        position: "Defender",
+        nationality: "Ukraine",
+        birth: "19 February 2008",
+
+        description: "Mykyta Zaluzhnyi is a reliable central defender known for his strong game reading and confident defensive play. He performs well in duels, maintains smart positioning, and helps the team organize its defensive structure. Mykyta is also valuable during set pieces thanks to his aerial ability."
+    }
+};
+
+function applyTranslation() {
+    const t = translations[lang];
+
+    // Кнопки
+    document.querySelectorAll(".back-button")[0].textContent = t.back;
+    document.querySelectorAll(".back-button")[1].textContent = t.home;
+
+    // Ім'я
+    document.querySelector(".player-name").textContent = t.name;
+
+    // Параметри
+    document.querySelectorAll(".param-title")[0].textContent = t.position_title;
+    document.querySelectorAll(".param-title")[1].textContent = t.nationality_title;
+    document.querySelectorAll(".param-title")[2].textContent = t.birth_title;
+
+    document.querySelectorAll(".param-value")[0].textContent = t.position;
+    document.querySelectorAll(".param-value")[1].textContent = t.nationality;
+    document.querySelectorAll(".param-value")[2].textContent = t.birth;
+
+    // Опис
+    document.querySelector(".description").textContent = t.description;
+}
+
+applyTranslation();
+</script>
+
+</body>
+</html>

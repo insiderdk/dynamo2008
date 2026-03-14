@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    background: #0057B8; /* офіційний синій Динамо */
+    font-family: Montserrat, Arial, sans-serif;
+    color: white;
+}
+
+
+
+/* Сучасна кнопка назад */
+.back-button {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0033A0;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.back-button:hover {
+    background: rgba(0, 51, 160, 0.12);
+}
+
+/* Головний контейнер */
+.player-wrapper {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+/* Ліва частина — ТЕКСТ */
+.left-side {
+    width: 50%;
+    padding: 80px 60px;
+    box-sizing: border-box;
+}
+
+/* Ім'я гравця */
+.player-name {
+    font-size: 52px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Декоративна лінія */
+.underline {
+    width: 100%;
+    max-width: 850px;
+    height: 6px;
+    background: white;
+    margin: 12px 0 35px 0;
+    border-radius: 3px;
+}
+
+/* Параметри в один ряд */
+.param-row {
+    display: flex;
+    justify-content: space-between; /* рівний розподіл */
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.param-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.param-title {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.param-value {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* Опис */
+.description {
+    margin-top: 20px;
+    font-size: 16px;      /* було 20 → тепер ще більший */
+    line-height: 1.3;     /* більше повітря */
+    max-width: 600px;     /* ширше */
+    font-weight: 400;
+}
+
+/* Права частина — ФОТО + НОМЕР */
+.right-side {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+/* Великий номер — БІЛИЙ і БІЛЬШИЙ */
+.big-number {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    z-index: 1;
+}
+
+/* Однозначні номери (1–9) */
+.big-number.single {
+    font-size: 420px;
+}
+
+/* Двозначні номери (10–99) */
+.big-number.double {
+    font-size: 300px;
+    right: 40px; /* трохи ближче до центру */
+}
+
+/* Фото гравця */
+.player-photo {
+    position: absolute;
+    bottom: 0;
+    right: 120px;   /* було 40px → тепер ближче до центру */
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+}
+/* Верхня біла панель */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-sizing: border-box;
+    z-index: 50;
+}
+
+/* Логотип Динамо */
+.club-logo {
+    height: 50px;
+}
+
+/* Верхня біла панель */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-sizing: border-box;
+    z-index: 50;
+}
+
+/* Логотип */
+.club-logo {
+    height: 50px;
+}
+
+/* Навігація */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0033A0;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.nav-item:hover {
+    background: rgba(0, 51, 160, 0.12);
+}
+
+.nav-item.active {
+    background: #0033A0;
+    color: white;
+}
+/* Верхня біла панель */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    box-sizing: border-box;
+    z-index: 50;
+}
+
+/* Група з кнопкою і логотипом */
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Логотип Динамо — більший */
+.club-logo {
+    height: 60px;
+}
+
+/* Кнопка назад */
+.back-button {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0033A0;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+.back-button:hover {
+    background: rgba(0, 51, 160, 0.12);
+}
+
+/* Навігація — як на головній */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0033A0;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.nav-item:hover {
+    background: rgba(0, 51, 160, 0.12);
+}
+
+.nav-item.active {
+    background: #0033A0;
+    color: white;
+}
+
+

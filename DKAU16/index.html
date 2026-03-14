@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>DKA2008-21/22/23</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="title">
+        <img src="dynamo.png" class="logo">
+
+        <div class="title-text">
+            <h1 class="team-title" id="main-title">Академія «Динамо» 2008 | Сезон 21/22/23</h1>
+            <div class="team-underline"></div>
+        </div>
+    </div>
+<nav class="menu">
+    <a onclick="showSection('all', this)" class="active">Всі</a>
+    <a onclick="showSection('goalkeepers', this)">Воротарі</a>
+    <a onclick="showSection('defenders', this)">Захисники</a>
+    <a onclick="showSection('midfielders', this)">Півзахисники</a>
+    <a onclick="showSection('forwards', this)">Нападники</a>
+
+    <button class="lang-switch" onclick="toggleLanguage()">UA / EN</button>
+</nav>
+
+
+
+
+</header>
+
+
+<!-- НАПАДНИКИ -->
+<div class="container" id="forwards">
+<h2 class="section-title" id="title-forwards">Нападники</h2>
+
+
+<div class="players">
+
+<a href="stats/bereka.html" class="card-link">
+    <div class="card">
+        <div class="number">7</div>
+        <img src="берека.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-bereka">Вінгер</div>
+           <div class="name" id="name-bereka">Ігор<br>Берека</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/chernetskyi.html" class="card-link">
+    <div class="card">
+        <div class="number">11</div>
+        <img src="микита.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-chernetskyi">Нападник</div>
+            <div class="name" id="name-chernetskyi">Микита<br>Чернецький</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/mykhaylov.html" class="card-link">
+    <div class="card">
+        <div class="number">9</div>
+        <img src="леша.png" class="player">
+        <div class="info">
+            <div class="position" id="pos-mykhaylov">Нападник</div>
+           <div class="name" id="name-mykhaylov">Олексій<br>Михайлов</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/евтушенко.html" class="card-link">
+    <div class="card">
+        <div class="number">17</div>
+        <img src="евтушенко.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-evtushenko">Вінгер</div>
+            <div class="name" id="name-evtushenko">Дмитро<br>Евтушенко</div>
+        </div>
+    </div>
+</a>
+
+</div>
+</div>
+
+
+<!-- ПІВЗАХИСНИКИ -->
+<div class="container" id="midfielders">
+<h2 class="section-title" id="title-midfielders">Півзахисники</h2>
+
+
+<div class="players">
+
+<a href="stats/adikayev.html" class="card-link">
+    <div class="card">
+        <div class="number">10</div>
+        <img src="миша.png" class="player">
+        <div class="info">
+            <div class="position" id="pos-adikayev">Півзахисник</div>
+            <div class="name" id="name-adikayev">Михайло<br>Адікаев</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/molodyy.html" class="card-link">
+    <div class="card">
+        <div class="number">6</div>
+        <img src="остап.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-molodyy">Півзахисник</div>
+
+            <div class="name" id="name-molodyy">Остап<br>Молодий</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/koretskiy.html" class="card-link">
+    <div class="card">
+        <div class="number">8</div>
+        <img src="ваня.png" class="player">
+        <div class="info">
+            <div class="position" id="pos-koretskyi">Півзахисник</div>
+
+            <div class="name" id="name-koretskyi">Іван<br>Корецький</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/kuprienko.html" class="card-link">
+    <div class="card">
+        <div class="number">22</div>
+        <img src="діма.png" class="player">
+        <div class="info">
+          <div class="position" id="pos-kuprienko">Півзахисник</div>
+
+          <div class="name" id="name-kuprienko">Дмитро<br>Купрієнко</div>
+        </div>
+    </div>
+</a>
+
+</div>
+</div>
+
+
+<!-- ЗАХИСНИКИ -->
+<div class="container" id="defenders">
+<h2 class="section-title" id="title-defenders">Захисники</h2>
+
+
+<div class="players">
+
+<a href="stats/vorobev.html" class="card-link">
+    <div class="card">
+        <div class="number">4</div>
+        <img src="саня.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-vorobev">Захисник</div>
+
+           <div class="name" id="name-vorobev">Олександр<br>Воробев</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/stoikov.html" class="card-link">
+    <div class="card">
+        <div class="number">39</div>
+        <img src="stoikov.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-stoikov">Лівий-захисник</div>
+
+           <div class="name" id="name-stoikov">Андрій<br>Стойков</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/zaluzhnyy.html" class="card-link">
+    <div class="card">
+        <div class="number">13</div>
+        <img src="zaluzhnyy.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-zaluzhnyy">Захисник</div>
+
+            <div class="name" id="name-zaluzhnyy">Микита<br>Залужний</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/voicenko.html" class="card-link">
+    <div class="card">
+        <div class="number">19</div>
+        <img src="voicenko.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-voichenko">Правий-захисник</div>
+
+          <div class="name" id="name-voichenko">Св'ятослав<br>Войченко</div>
+        </div>
+    </div>
+</a>
+
+</div>
+</div>
+
+
+<!-- ВОРОТАРІ -->
+<div class="container" id="goalkeepers">
+<h2 class="section-title" id="title-goalkeepers">Воротарі</h2>
+
+
+<div class="players">
+
+<a href="stats/шепелев.html" class="card-link">
+    <div class="card">
+        <div class="number">99</div>
+        <img src="вртр2.png" class="player">
+        <div class="info">
+           <div class="position" id="pos-shepelev">Воротар</div>
+
+           <div class="name" id="name-shepelev">Єгор<br>Шепелев</div>
+        </div>
+    </div>
+</a>
+
+<a href="stats/бульба.html" class="card-link">
+    <div class="card">
+        <div class="number">1</div>
+        <img src="пост.png" class="player">
+        <div class="info">
+          <div class="position" id="pos-bulba">Воротар</div>
+
+           <div class="name" id="name-bulba">Артем<br>Бульба</div>
+        </div>
+    </div>
+</a>
+
+</div>
+</div>
+<script>
+function showSection(section, element){
+    let sections = document.querySelectorAll(".container");
+
+    sections.forEach(sec => {
+        if(section === "all"){
+            sec.style.display = "block";
+        } else {
+            sec.style.display = "none";
+        }
+    });
+
+    if(section !== "all"){
+        document.getElementById(section).style.display = "block";
+    }
+
+    let links = document.querySelectorAll(".menu a");
+    links.forEach(link => link.classList.remove("active"));
+    element.classList.add("active");
+}
+</script>
+
+<script>
+let currentLang = localStorage.getItem("lang") || "ua";
+
+const translations = {
+    ua: {
+        all: "Всі",
+        goalkeepers: "Воротарі",
+        defenders: "Захисники",
+        midfielders: "Півзахисники",
+        forwards: "Нападники",
+        title: "Академія «Динамо» 2008 | Сезон 21/22/23",
+
+        title_forwards: "Нападники",
+        title_midfielders: "Півзахисники",
+        title_defenders: "Захисники",
+        title_goalkeepers: "Воротарі",
+
+        player_names: {
+            bereka: "Ігор Берека",
+            chernetskyi: "Микита Чернецький",
+            mykhaylov: "Олексій Михайлов",
+            evtushenko: "Дмитро Евтушенко",
+
+            adikayev: "Михайло Адікаев",
+            molodyy: "Остап Молодий",
+            koretskyi: "Іван Корецький",
+            kuprienko: "Дмитро Купрієнко",
+
+            vorobev: "Олександр Воробев",
+            stoikov: "Андрій Стойков",
+            zaluzhnyy: "Микита Залужний",
+            voichenko: "Св'ятослав Войченко",
+
+            shepelev: "Єгор Шепелев",
+            bulba: "Артем Бульба"
+        },
+
+        positions: {
+            bereka: "Вінгер",
+            chernetskyi: "Нападник",
+            mykhaylov: "Нападник",
+            evtushenko: "Вінгер",
+
+            adikayev: "Півзахисник",
+            molodyy: "Півзахисник",
+            koretskyi: "Півзахисник",
+            kuprienko: "Півзахисник",
+
+            vorobev: "Захисник",
+            stoikov: "Лівий-захисник",
+            zaluzhnyy: "Захисник",
+            voichenko: "Правий-захисник",
+
+            shepelev: "Воротар",
+            bulba: "Воротар"
+        }
+    },
+
+    en: {
+        all: "All",
+        goalkeepers: "Goalkeepers",
+        defenders: "Defenders",
+        midfielders: "Midfielders",
+        forwards: "Forwards",
+        title: "Dynamo Kyiv Academy 2008 | Season 21/22/23",
+
+        title_forwards: "Forwards",
+        title_midfielders: "Midfielders",
+        title_defenders: "Defenders",
+        title_goalkeepers: "Goalkeepers",
+
+        player_names: {
+            bereka: "Ihor Bereka",
+            chernetskyi: "Mykyta Chernetskyi",
+            mykhaylov: "Oleksii Mykhailov",
+            evtushenko: "Dmytro Evtushenko",
+
+            adikayev: "Mykhailo Adikaiev",
+            molodyy: "Ostap Molodyy",
+            koretskyi: "Ivan Koretskyi",
+            kuprienko: "Dmytro Kupriienko",
+
+            vorobev: "Oleksandr Vorobev",
+            stoikov: "Andrii Stoikov",
+            zaluzhnyy: "Mykyta Zaluzhnyi",
+            voichenko: "Sviatoslav Voichenko",
+
+            shepelev: "Yehor Shepelev",
+            bulba: "Artem Bulba"
+        },
+
+        positions: {
+            bereka: "Winger",
+            chernetskyi: "Forward",
+            mykhaylov: "Forward",
+            evtushenko: "Winger",
+
+            adikayev: "Midfielder",
+            molodyy: "Midfielder",
+            koretskyi: "Midfielder",
+            kuprienko: "Midfielder",
+
+            vorobev: "Defender",
+            stoikov: "Left-back",
+            zaluzhnyy: "Defender",
+            voichenko: "Right-back",
+
+            shepelev: "Goalkeeper",
+            bulba: "Goalkeeper"
+        }
+    }
+};
+
+function toggleLanguage() {
+    currentLang = currentLang === "ua" ? "en" : "ua";
+
+    // 🔥 Ось цей рядок ти просив додати
+    localStorage.setItem("lang", currentLang);
+
+    const t = translations[currentLang];
+
+    document.getElementById("main-title").textContent = t.title;
+
+    const menuLinks = document.querySelectorAll(".menu a");
+    menuLinks[0].textContent = t.all;
+    menuLinks[1].textContent = t.goalkeepers;
+    menuLinks[2].textContent = t.defenders;
+    menuLinks[3].textContent = t.midfielders;
+    menuLinks[4].textContent = t.forwards;
+
+    document.getElementById("title-forwards").textContent = t.title_forwards;
+    document.getElementById("title-midfielders").textContent = t.title_midfielders;
+    document.getElementById("title-defenders").textContent = t.title_defenders;
+    document.getElementById("title-goalkeepers").textContent = t.title_goalkeepers;
+
+    for (const key in t.player_names) {
+        const el = document.getElementById("name-" + key);
+        if (el) {
+            const parts = t.player_names[key].split(" ");
+            el.innerHTML = parts[0] + "<br>" + parts[1];
+        }
+    }
+
+    for (const key in t.positions) {
+        const el = document.getElementById("pos-" + key);
+        if (el) {
+            el.textContent = t.positions[key];
+        }
+    }
+}
+</script>
+
+
+
+
+
+</body>
+</html>

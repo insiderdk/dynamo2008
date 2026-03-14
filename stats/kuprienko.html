@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Дмитро Купріенко — Профіль гравця</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+<div class="top-bar">
+
+    <div class="left-group">
+        <a href="../index.html" class="back-button">← Назад</a>
+        <img src="../dynamo.png" class="club-logo">
+    </div>
+
+   
+
+</div>
+
+
+
+<a href="../index.html" class="back-button">← Головна</a>
+
+<div class="player-wrapper">
+
+    <!-- ЛІВА ЧАСТИНА — ТЕКСТ -->
+    <div class="left-side">
+        <h1 class="player-name">Дмитро Купріенко</h1>
+        <div class="underline"></div>
+
+        <div class="param-row">
+            <div class="param-block">
+                <div class="param-title">Позиція</div>
+                <div class="param-value">Півзахисник</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Національність</div>
+                <div class="param-value">Україна</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Дата народження</div>
+                <div class="param-value">03.12.2009</div>
+            </div>
+        </div>
+
+        <p class="description">
+          Дмитро Купрієнко – технічний та перспективний півзахисник, який добре працює з м’ячем і впевнено підтримує атакувальні дії команди. Він відзначається хорошим баченням поля, точними передачами та вмінням знаходити вільні зони між лініями суперника.
+        </p>
+    </div>
+
+    <!-- ПРАВА ЧАСТИНА — ФОТО + НОМЕР -->
+    <div class="right-side">
+        <div class="big-number double">22</div>
+
+        <img src="../діма.png" class="player-photo">
+    </div>
+
+</div>
+<script>
+let lang = localStorage.getItem("lang") || "ua";
+
+const translations = {
+    ua: {
+        back: "← Назад",
+        home: "← Головна",
+        name: "Дмитро Купрієнко",
+
+        position_title: "Позиція",
+        nationality_title: "Національність",
+        birth_title: "Дата народження",
+
+        position: "Півзахисник",
+        nationality: "Україна",
+        birth: "03.12.2009",
+
+        description: "Дмитро Купрієнко – технічний та перспективний півзахисник, який добре працює з м’ячем і впевнено підтримує атакувальні дії команди. Він відзначається хорошим баченням поля, точними передачами та вмінням знаходити вільні зони між лініями суперника."
+    },
+
+    en: {
+        back: "← Back",
+        home: "← Home",
+        name: "Dmytro Kupriienko",
+
+        position_title: "Position",
+        nationality_title: "Nationality",
+        birth_title: "Date of birth",
+
+        position: "Midfielder",
+        nationality: "Ukraine",
+        birth: "03 December 2009",
+
+        description: "Dmytro Kupriienko is a technical and promising midfielder who works confidently with the ball and supports the team's attacking play. He is known for strong field vision, accurate passing, and the ability to find free spaces between the opponent’s lines."
+    }
+};
+
+function applyTranslation() {
+    const t = translations[lang];
+
+    // Кнопки
+    document.querySelectorAll(".back-button")[0].textContent = t.back;
+    document.querySelectorAll(".back-button")[1].textContent = t.home;
+
+    // Ім'я
+    document.querySelector(".player-name").textContent = t.name;
+
+    // Параметри
+    document.querySelectorAll(".param-title")[0].textContent = t.position_title;
+    document.querySelectorAll(".param-title")[1].textContent = t.nationality_title;
+    document.querySelectorAll(".param-title")[2].textContent = t.birth_title;
+
+    document.querySelectorAll(".param-value")[0].textContent = t.position;
+    document.querySelectorAll(".param-value")[1].textContent = t.nationality;
+    document.querySelectorAll(".param-value")[2].textContent = t.birth;
+
+    // Опис
+    document.querySelector(".description").textContent = t.description;
+}
+
+applyTranslation();
+</script>
+
+</body>
+</html>

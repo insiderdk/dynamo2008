@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Михайло Адікаев — Профіль гравця</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+<div class="top-bar">
+
+    <div class="left-group">
+        <a href="../index.html" class="back-button">← Назад</a>
+        <img src="../dynamo.png" class="club-logo">
+    </div>
+
+   
+
+</div>
+
+
+
+<a href="../index.html" class="back-button">← Головна</a>
+
+<div class="player-wrapper">
+
+    <!-- ЛІВА ЧАСТИНА — ТЕКСТ -->
+    <div class="left-side">
+        <h1 class="player-name">Михайло Адікаев</h1>
+        <div class="underline"></div>
+
+        <div class="param-row">
+            <div class="param-block">
+                <div class="param-title">Позиція</div>
+                <div class="param-value">Півзахисник</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Національність</div>
+                <div class="param-value">Україна</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Дата народження</div>
+                <div class="param-value">24.08.2008</div>
+            </div>
+        </div>
+
+        <p class="description">
+Михайло Адікаев – креативний півзахисник, який добре контролює темп гри та допомагає команді в організації атак. Він відзначається хорошим баченням поля, точними передачами та здатністю знаходити партнерів у вигідних позиціях.
+        </p>
+    </div>
+
+    <!-- ПРАВА ЧАСТИНА — ФОТО + НОМЕР -->
+    <div class="right-side">
+        <div class="big-number double">10</div>
+
+        <img src="../миша.png" class="player-photo">
+    </div>
+
+</div>
+<script>
+let lang = localStorage.getItem("lang") || "ua";
+
+const translations = {
+    ua: {
+        back: "← Назад",
+        home: "← Головна",
+        name: "Михайло Адікаев",
+
+        position_title: "Позиція",
+        nationality_title: "Національність",
+        birth_title: "Дата народження",
+
+        position: "Півзахисник",
+        nationality: "Україна",
+        birth: "24.08.2008",
+
+        description: "Михайло Адікаев – креативний півзахисник, який добре контролює темп гри та допомагає команді в організації атак. Він відзначається хорошим баченням поля, точними передачами та здатністю знаходити партнерів у вигідних позиціях."
+    },
+
+    en: {
+        back: "← Back",
+        home: "← Home",
+        name: "Mykhailo Adikaiev",
+
+        position_title: "Position",
+        nationality_title: "Nationality",
+        birth_title: "Date of birth",
+
+        position: "Midfielder",
+        nationality: "Ukraine",
+        birth: "24 August 2008",
+
+        description: "Mykhailo Adikaiev is a creative midfielder who controls the tempo of the game and helps the team build attacks. He is known for his strong vision, accurate passing, and ability to find teammates in advantageous positions."
+    }
+};
+
+function applyTranslation() {
+    const t = translations[lang];
+
+    // Кнопки
+    document.querySelectorAll(".back-button")[0].textContent = t.back;
+    document.querySelectorAll(".back-button")[1].textContent = t.home;
+
+    // Ім'я
+    document.querySelector(".player-name").textContent = t.name;
+
+    // Параметри
+    document.querySelectorAll(".param-title")[0].textContent = t.position_title;
+    document.querySelectorAll(".param-title")[1].textContent = t.nationality_title;
+    document.querySelectorAll(".param-title")[2].textContent = t.birth_title;
+
+    document.querySelectorAll(".param-value")[0].textContent = t.position;
+    document.querySelectorAll(".param-value")[1].textContent = t.nationality;
+    document.querySelectorAll(".param-value")[2].textContent = t.birth;
+
+    // Опис
+    document.querySelector(".description").textContent = t.description;
+}
+
+applyTranslation();
+</script>
+
+</body>
+</html>

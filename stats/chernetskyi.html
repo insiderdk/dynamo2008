@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Микита Чернецький — Профіль гравця</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+<div class="top-bar">
+
+    <div class="left-group">
+        <a href="../index.html" class="back-button">← Назад</a>
+        <img src="../dynamo.png" class="club-logo">
+    </div>
+
+   
+
+</div>
+
+
+
+<a href="../index.html" class="back-button">← Головна</a>
+
+<div class="player-wrapper">
+
+    <!-- ЛІВА ЧАСТИНА — ТЕКСТ -->
+    <div class="left-side">
+        <h1 class="player-name">Микита Чернецький</h1>
+        <div class="underline"></div>
+
+        <div class="param-row">
+            <div class="param-block">
+                <div class="param-title">Позиція</div>
+                <div class="param-value">Нападник</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Національність</div>
+                <div class="param-value">Україна</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Дата народження</div>
+                <div class="param-value">21.09.2008</div>
+            </div>
+        </div>
+
+        <p class="description">
+            Микита Чернецький – швидкий та технічний нападник, який відзначається гострим баченням поля та влучними завершеннями атак. Він має відмінну швидкість та ефективно взаємодіє з партнерами по команді, демонструючи високий рівень майстерності та потенціал для розвитку в професійному футболі, він є ключовим в команді та має велике майбутнє.
+        </p>
+    </div>
+
+    <!-- ПРАВА ЧАСТИНА — ФОТО + НОМЕР -->
+    <div class="right-side">
+        <div class="big-number double">11</div>
+
+        <img src="../микита.png" class="player-photo">
+    </div>
+
+</div>
+<script>
+let lang = localStorage.getItem("lang") || "ua";
+
+const translations = {
+    ua: {
+        back: "← Назад",
+        home: "← Головна",
+        name: "Микита Чернецький",
+
+        position_title: "Позиція",
+        nationality_title: "Національність",
+        birth_title: "Дата народження",
+
+        position: "Нападник",
+        nationality: "Україна",
+        birth: "21.09.2008",
+
+        description: "Микита Чернецький – швидкий та технічний нападник, який відзначається гострим баченням поля та влучними завершеннями атак. Він має відмінну швидкість та ефективно взаємодіє з партнерами по команді, демонструючи високий рівень майстерності та потенціал для розвитку в професійному футболі. Він є ключовим гравцем у команді та має велике майбутнє."
+    },
+
+    en: {
+        back: "← Back",
+        home: "← Home",
+        name: "Mykyta Chernetskyi",
+
+        position_title: "Position",
+        nationality_title: "Nationality",
+        birth_title: "Date of birth",
+
+        position: "Forward",
+        nationality: "Ukraine",
+        birth: "21 September 2008",
+
+        description: "Mykyta Chernetskyi is a fast and technical forward known for his sharp field vision and accurate finishing. He has excellent speed and works effectively with teammates, showing a high level of skill and strong potential for professional development. He is a key player in the team with a bright future ahead."
+    }
+};
+
+function applyTranslation() {
+    const t = translations[lang];
+
+    // Кнопки
+    document.querySelectorAll(".back-button")[0].textContent = t.back;
+    document.querySelectorAll(".back-button")[1].textContent = t.home;
+
+    // Ім'я
+    document.querySelector(".player-name").textContent = t.name;
+
+    // Параметри
+    document.querySelectorAll(".param-title")[0].textContent = t.position_title;
+    document.querySelectorAll(".param-title")[1].textContent = t.nationality_title;
+    document.querySelectorAll(".param-title")[2].textContent = t.birth_title;
+
+    document.querySelectorAll(".param-value")[0].textContent = t.position;
+    document.querySelectorAll(".param-value")[1].textContent = t.nationality;
+    document.querySelectorAll(".param-value")[2].textContent = t.birth;
+
+    // Опис
+    document.querySelector(".description").textContent = t.description;
+}
+
+applyTranslation();
+</script>
+
+
+</body>
+</html>

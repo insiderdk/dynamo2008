@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Св'ятослав Войченко — Профіль гравця</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+<div class="top-bar">
+
+    <div class="left-group">
+        <a href="../index.html" class="back-button">← Назад</a>
+        <img src="../dynamo.png" class="club-logo">
+    </div>
+
+   
+
+</div>
+
+
+
+<a href="../index.html" class="back-button">← Головна</a>
+
+<div class="player-wrapper">
+
+    <!-- ЛІВА ЧАСТИНА — ТЕКСТ -->
+    <div class="left-side">
+        <h1 class="player-name">Св'ятослав Войченко</h1>
+        <div class="underline"></div>
+
+        <div class="param-row">
+            <div class="param-block">
+                <div class="param-title">Позиція</div>
+                <div class="param-value">Правий-захисник</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Національність</div>
+                <div class="param-value">Україна</div>
+            </div>
+
+            <div class="param-block">
+                <div class="param-title">Дата народження</div>
+                <div class="param-value">13.06.2008</div>
+            </div>
+        </div>
+
+        <p class="description">
+           Святослав Войченко – швидкий та витривалий правий захисник, який активно працює на своєму фланзі. Він надійно діє в обороні, добре підключається до атак та допомагає команді створювати моменти завдяки своїм фланговим проходам і точним передачам.
+        </p>
+    </div>
+
+    <!-- ПРАВА ЧАСТИНА — ФОТО + НОМЕР -->
+    <div class="right-side">
+        <div class="big-number double">19</div>
+
+       <img src="../voicenko.png" class="player-photo">
+
+    </div>
+
+</div>
+<script>
+let lang = localStorage.getItem("lang") || "ua";
+
+const translations = {
+    ua: {
+        back: "← Назад",
+        home: "← Головна",
+        name: "Св'ятослав Войченко",
+
+        position_title: "Позиція",
+        nationality_title: "Національність",
+        birth_title: "Дата народження",
+
+        position: "Правий-захисник",
+        nationality: "Україна",
+        birth: "13.06.2008",
+
+        description: "Святослав Войченко – швидкий та витривалий правий захисник, який активно працює на своєму фланзі. Він надійно діє в обороні, добре підключається до атак та допомагає команді створювати моменти завдяки своїм фланговим проходам і точним передачам."
+    },
+
+    en: {
+        back: "← Back",
+        home: "← Home",
+        name: "Sviatoslav Voichenko",
+
+        position_title: "Position",
+        nationality_title: "Nationality",
+        birth_title: "Date of birth",
+
+        position: "Right-back",
+        nationality: "Ukraine",
+        birth: "13 June 2008",
+
+        description: "Sviatoslav Voichenko is a fast and resilient right-back who works actively on his flank. He is reliable in defense, joins attacks effectively, and helps the team create chances thanks to his flank runs and accurate passes."
+    }
+};
+
+function applyTranslation() {
+    const t = translations[lang];
+
+    // Кнопки
+    document.querySelectorAll(".back-button")[0].textContent = t.back;
+    document.querySelectorAll(".back-button")[1].textContent = t.home;
+
+    // Ім'я
+    document.querySelector(".player-name").textContent = t.name;
+
+    // Параметри
+    document.querySelectorAll(".param-title")[0].textContent = t.position_title;
+    document.querySelectorAll(".param-title")[1].textContent = t.nationality_title;
+    document.querySelectorAll(".param-title")[2].textContent = t.birth_title;
+
+    document.querySelectorAll(".param-value")[0].textContent = t.position;
+    document.querySelectorAll(".param-value")[1].textContent = t.nationality;
+    document.querySelectorAll(".param-value")[2].textContent = t.birth;
+
+    // Опис
+    document.querySelector(".description").textContent = t.description;
+}
+
+applyTranslation();
+</script>
+
+</body>
+</html>
