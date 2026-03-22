@@ -211,23 +211,35 @@ line-height:1.2;
 .lang-switch:hover {
     background: #0050d4;
 }
-.players {
+
+/* === АДАПТИВ ДЛЯ ТЕЛЕФОНІВ === */
+@media (max-width: 768px) {
+
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .players {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .card {
     width: 90%;
-    margin-bottom: 20px;
+    height: auto;
   }
 
   nav.menu {
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
   nav.menu a {
     padding: 10px 0;
+    display: block;
   }
 
   .title {
@@ -235,10 +247,24 @@ line-height:1.2;
     text-align: center;
   }
 
+  .logo {
+    width: 180px;
+  }
+
   .team-title {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .team-underline {
+    width: 60%;
+  }
+
+  .lang-switch {
+    right: 20px;
+    bottom: 20px;
   }
 }
+
 
 
 
