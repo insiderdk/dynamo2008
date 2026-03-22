@@ -168,57 +168,5 @@ body {
     background: #0050d4;
 }
 
-/* === MOBILE ADAPTIVE === */
-@media (max-width: 768px) {
-
-    .container {
-        padding: 0 10px;
-    }
-
-    .players {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-
-    .title {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        width: 180px;
-    }
-
-    .team-title {
-        font-size: 20px;
-    }
-
-    .team-underline {
-        width: 60%;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu a {
-        display: block;
-        padding: 10px 0;
-    }
-
-    .lang-switch {
-        right: 20px;
-        bottom: 20px;
-    }
-}
-
 
 
