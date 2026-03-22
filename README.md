@@ -157,7 +157,7 @@
 <a href="stats/vorobev.html" class="card-link">
     <div class="card">
         <div class="number">4</div>
-        <img src="саня.png" class="player">
+        <img src="саш.png" class="player">
         <div class="info">
            <div class="position" id="pos-vorobev">Захисник</div>
 
