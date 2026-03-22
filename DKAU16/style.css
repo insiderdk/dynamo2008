@@ -21,8 +21,9 @@ body {
 
 .players {
     display: flex;
-    gap: 18px;
     flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
 }
 
 /* === PLAYER CARD === */
@@ -92,7 +93,6 @@ body {
     position: relative;
 }
 
-/* LOGO + TITLE */
 .title {
     display: flex;
     align-items: center;
@@ -218,4 +218,7 @@ body {
         right: 20px;
         bottom: 20px;
     }
+}
+
+
 }
