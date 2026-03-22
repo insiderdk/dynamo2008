@@ -211,6 +211,36 @@ line-height:1.2;
 .lang-switch:hover {
     background: #0050d4;
 }
+.players {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  nav.menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav.menu a {
+    padding: 10px 0;
+  }
+
+  .title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-title {
+    font-size: 18px;
+  }
+}
+
+
 
 
 
