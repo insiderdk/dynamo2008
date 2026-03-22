@@ -1,130 +1,112 @@
-body{
-background:#f4f4f4;
-font-family:Montserrat, Arial, Helvetica, sans-serif;
-margin:0;
+/* === GLOBAL === */
+body {
+    background: #f4f4f4;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-.container{
-width:1100px;
-margin:auto;
+/* === LAYOUT === */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
 }
 
-.section-title{
-font-size:18px;
-font-weight:700;
-margin:30px 0 15px;
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 30px 0 15px;
 }
 
-.players{
-display:flex;
-gap:18px;
+.players {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
-/* PLAYER CARD */
-
-.card{
-position:relative;
-width:250px;
-height:330px; /* було 300 */
-
-background:linear-gradient(180deg,#1f57b6,#0b3f8c);
-
-border-radius:12px;
-
-overflow:hidden;
-
-color:white;
+/* === PLAYER CARD === */
+.card {
+    position: relative;
+    width: 250px;
+    height: 330px;
+    background: linear-gradient(180deg, #1f57b6, #0b3f8c);
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.number{
-position:absolute;
-
-top:10px;
-left:20px;
-
-font-size:120px;
-
-font-weight:700;
-
-opacity:0.15;
-
-line-height:1;
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
-.top-line{
-display:none;
+.card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* PLAYER IMAGE */
-
-.player{
-
-position:absolute;
-
-bottom:0;
-left:50%;
-
-transform:translateX(-50%);
-
-height:280px;
-object-fit:contain;
-}
-.info{
-
-position:absolute;
-
-bottom:15px;
-left:18px;
-
+.number {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 120px;
+    font-weight: 700;
+    opacity: 0.15;
+    line-height: 1;
 }
 
-.position{
-
-font-size:11px;
-
-letter-spacing:1px;
-
-opacity:0.8;
-
-margin-bottom:3px;
+.player {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 280px;
+    object-fit: contain;
 }
 
-.name{
-
-font-size:14px;
-
-font-weight:600;
-
-line-height:1.2;
+.info {
+    position: absolute;
+    bottom: 15px;
+    left: 18px;
 }
 
-/* HEADER */
+.position {
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 3px;
+}
 
+.name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* === HEADER === */
 .header {
     padding: 20px;
     background: white;
-    position: relative; /* важливо */
+    position: relative;
 }
 
-
 /* LOGO + TITLE */
-
 .title {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-
-
 .logo {
-    width: 320px; /* або 150px, якщо хочеш більше */
+    width: 320px;
 }
 
 .title-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* полоска під текстом */
+    align-items: flex-start;
 }
 
 .team-title {
@@ -134,10 +116,15 @@ line-height:1.2;
     margin: 0;
 }
 
-
+.team-underline {
+    width: 800px;
+    height: 6px;
+    background: #0073CF;
+    border-radius: 3px;
+    margin-top: 10px;
+}
 
 /* MENU */
-
 .menu {
     margin-top: 20px;
     text-align: center;
@@ -160,40 +147,9 @@ line-height:1.2;
 .menu .active {
     color: #0b5ed7;
     border-bottom: 3px solid #0b5ed7;
-    padding-bottom: 5px;
 }
 
-.card {
-    position: relative;
-    width: 250px;
-    height: 330px;
-    background: linear-gradient(180deg,#1f57b6,#0b3f8c);
-    border-radius: 12px;
-    overflow: hidden;
-    color: white;
-
-    transition: transform 0.25s ease, box-shadow 0.25s ease; /* 🔥 плавність */
-}
-
-.card:hover {
-    transform: translateY(-6px); /* 🔥 піднімається */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25); /* легка тінь */
-}
-.card:hover {
-    transform: translateY(-6px) scale(1.03);
-}
-.card-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.team-underline {
-    width: 800px;
-    height: 6px;
-    background: #0073CF;
-    border-radius: 3px;
-    margin-top: 10px;
-}
+/* LANGUAGE SWITCH */
 .lang-switch {
     position: absolute;
     right: 220px;
@@ -212,65 +168,54 @@ line-height:1.2;
     background: #0050d4;
 }
 
-/* === АДАПТИВ ДЛЯ ТЕЛЕФОНІВ === */
+/* === MOBILE ADAPTIVE === */
 @media (max-width: 768px) {
 
-  .container {
-    width: 100%;
-    padding: 0 15px;
-  }
+    .container {
+        padding: 0 10px;
+    }
 
-  .players {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+    .players {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
-  .card {
-    width: 90%;
-    height: auto;
-  }
+    .card {
+        width: 100%;
+        height: auto;
+    }
 
-  nav.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+    .title {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  nav.menu a {
-    padding: 10px 0;
-    display: block;
-  }
+    .logo {
+        width: 180px;
+    }
 
-  .title {
-    flex-direction: column;
-    text-align: center;
-  }
+    .team-title {
+        font-size: 20px;
+    }
 
-  .logo {
-    width: 180px;
-  }
+    .team-underline {
+        width: 60%;
+    }
 
-  .team-title {
-    font-size: 20px;
-  }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .team-underline {
-    width: 60%;
-  }
+    .menu a {
+        display: block;
+        padding: 10px 0;
+    }
 
-  .lang-switch {
-    right: 20px;
-    bottom: 20px;
-  }
+    .lang-switch {
+        right: 20px;
+        bottom: 20px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
